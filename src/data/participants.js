@@ -1,4 +1,4 @@
-export const participantsInfo = [
+export var participantsInfo = [
     {
         id: 1,
         name: "Akanksha",

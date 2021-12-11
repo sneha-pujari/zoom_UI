@@ -2,12 +2,16 @@ import React, { createContext, useContext, useReducer } from "react";
 import { participantsInfo } from "../data/participants";
 import { partReducer } from "../reducer/partReducer";
 
-const UserContext = createContext({});
+const INITIAL_STATE={
+  userDetails: participantsInfo
+}
+
+const UserContext = createContext(INITIAL_STATE);
 
 export function UserContextProvider({ children }) {
-  const [state, dispatch] = useReducer(partReducer, participantsInfo);
+  const [state, dispatch] = useReducer(partReducer, INITIAL_STATE);
   const value = {
-    state,
+    userDetails: state.userDetails,
     dispatch,
   };
 
