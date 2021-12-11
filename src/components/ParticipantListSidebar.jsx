@@ -1,19 +1,5 @@
-import { participantsInfo } from "../data/participants";
-import { Flex, Spacer, Button } from "@chakra-ui/react";
-import { useContext, useEffect } from "react";
+import { Button } from "@chakra-ui/react";
 import { useUserContext } from "../context/participantContext";
-import { partReducer } from "../reducer/partReducer";
-import {
-  Table,
-  Thead,
-  Tbody,
-  Tfoot,
-  Tr,
-  Th,
-  Td,
-  TableCaption,
-} from "@chakra-ui/react";
-
 export default function ParticipantListSidebar() {
   const { userDetails, dispatch } = useUserContext();
 

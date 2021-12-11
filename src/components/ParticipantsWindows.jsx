@@ -1,10 +1,8 @@
-import ParticipantWindow from "./ParticipantWindow";
-import { participantsInfo } from "../data/participants";
 import { Wrap, WrapItem, Center } from "@chakra-ui/react";
 import { useUserContext } from "../context/participantContext";
 
 export default function ParticipantsWindows() {
-  const { userDetails, dispatch } = useUserContext();
+  const { userDetails } = useUserContext();
 
   return (
     <>
